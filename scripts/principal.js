@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para obtener las carreras desde el backend
     function fetchCarreras() {
-        fetch('https://backendstudymanager-production.up.railway.app//carreras')
+        fetch('https://backendstudymanager-production.up.railway.app/carreras')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Error al obtener las carreras');
