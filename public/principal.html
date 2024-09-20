@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ies App</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlace al archivo CSS -->
+  </head>
 
-<body>
+  <body>
     <!-- Header con el logo de la aplicación y el botón de cerrar sesión -->
     <header class="main-header">
-        <h2>Study Manager</h2>
-        <!-- Botón de Cerrar Sesión ubicado en el header -->
-        <button id="logoutButton" class="logout-button">Cerrar Sesión</button>
+      <h2>Study Manager</h2>
+      <!-- Botón de Cerrar Sesión ubicado en el header -->
+      <button id="logoutButton" class="logout-button">Cerrar Sesión</button>
     </header>
 
     <!-- Contenedor principal para la selección de carreras, años y materias -->
     <main class="container">
-        <!-- Título dinámico que cambiará según la vista -->
-        <h3 id="carrera-title" style="display: block;">Selecciona tu Carrera</h3>
-        <h3 id="anio-title" style="display: none;">Seleccione un Año</h3>
-        <h3 id="materia-title" style="display: none;">Materias</h3>
+      <!-- Título dinámico que cambiará según la vista -->
+      <h3 id="carrera-title" style="display: block">Selecciona tu Carrera</h3>
+      <h3 id="anio-title" style="display: none">Seleccione un Año</h3>
+      <h3 id="materia-title" style="display: none">Materias</h3>
 
-        <!-- Contenedor para la lista de carreras -->
-        <ul class="list carrera-list" id="carrera-list"></ul>
+      <!-- Contenedor para la lista de carreras -->
+      <ul class="list carrera-list" id="carrera-list"></ul>
 
-        <!-- Botón de Volver desde los años a las carreras -->
-        <button id="backToCarreras" class="back-button" style="display:none;">Volver a Carreras</button>
+      <!-- Botón de Volver desde los años a las carreras -->
+      <button id="backToCarreras" class="back-button" style="display: none">
+        Volver a Carreras
+      </button>
 
-        <!-- Contenedor para los años (se mostrará dinámicamente) -->
-        <div id="anio-container" class="anio-container" style="display:none;">
-            <ul id="anio-list" class="list"></ul>
+      <!-- Contenedor para los años (se mostrará dinámicamente) -->
+      <div id="anio-container" class="anio-container" style="display: none">
+        <ul id="anio-list" class="list"></ul>
+      </div>
+
+      <!-- Botón de Volver desde las materias a los años -->
+      <button id="backToAnios" class="back-button" style="display: none">
+        Volver a Años
+      </button>
+
+      <!-- Contenedor para las materias (se mostrará dinámicamente) -->
+      <div
+        id="materia-container"
+        class="materia-container"
+        style="display: none"
+      >
+        <ul id="materia-list" class="list"></ul>
+      </div>
+
+      <!-- Modal personalizado para la matriculación -->
+      <div id="modalMatricula" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            Estás a punto de matricularte en: <span id="materiaModal"></span>
+          </p>
+          <button id="confirmMatricula">Aceptar</button>
         </div>
+      </div>
 
-        <!-- Botón de Volver desde las materias a los años -->
-        <button id="backToAnios" class="back-button" style="display:none;">Volver a Años</button>
-
-        <!-- Contenedor para las materias (se mostrará dinámicamente) -->
-        <div id="materia-container" class="materia-container" style="display:none;">
-            <ul id="materia-list" class="list"></ul>
-        </div>
-
-        <!-- Contenedor para la matriculación (simplificado) -->
-        <div id="matriculacion-container" class="matriculacion-container" style="display:none;">
-            <button id="enrollButton" class="enroll-button">Matricularse en <span id="selectedMateria"></span></button>
-        </div>
-        <div>
-            <ul class="list">
-                <li><a href="recomendaciones.html">Recomendaciones de Materias</a></li>
-                <li><a href="calendario.html">Calendario de Tareas y Exámenes</a></li>
-            </ul>
-        </div>
+      <div>
+        <ul class="list">
+          <li>
+            <a href="recomendaciones.html">Recomendaciones de Materias</a>
+          </li>
+          <li><a href="calendario.html">Calendario de Tareas y Exámenes</a></li>
+        </ul>
+      </div>
     </main>
     <!-- Footer para la información de la aplicación -->
     <footer class="main-footer">
-        <p>&copy; 2023 Ies App. Todos los derechos reservados 😊.</p>
+      <p>&copy; 2023 Ies App. Todos los derechos reservados 😊.</p>
     </footer>
 
     <!-- Incluir el archivo JavaScript externo -->
     <script src="principal.js"></script>
-</body>
-
+  </body>
 </html>

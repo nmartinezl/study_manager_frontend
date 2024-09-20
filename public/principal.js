@@ -116,17 +116,40 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error al obtener materias:', error));
     }
 
-    // Función para mostrar la matriculación en una materia
-    function showEnrollment(materiaNombre) {
-        const matriculacionContainer = document.getElementById('matriculacion-container');
-        matriculacionContainer.style.display = 'block';
-        document.getElementById('carrera-list').style.display = 'none';
-        document.getElementById('anio-container').style.display = 'none';
-        document.getElementById('materia-container').style.display = 'none';
-        document.getElementById('backToCarreras').style.display = 'none';
-        document.getElementById('backToAnios').style.display = 'none';
-        alert(`Estás a punto de matricularte en: ${materiaNombre}`);
-    }
+// Función para mostrar la matriculación en una materia
+function showEnrollment(materiaNombre) {
+    // Obtener elementos del modal
+    const modal = document.getElementById("modalMatricula");
+    const span = document.getElementsByClassName("close")[0];
+    const confirmButton = document.getElementById("confirmMatricula");
+    const materiaSpan = document.getElementById("materiaModal");
+
+    // Mostrar la materia en el modal
+    materiaSpan.textContent = materiaNombre;
+
+    // Mostrar el modal
+    modal.style.display = "flex";
+
+    // Cerrar el modal cuando se hace clic en la "x"
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // Cerrar el modal si se hace clic fuera de él
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // Acción cuando el usuario confirma la matriculación
+    confirmButton.onclick = function () {
+        modal.style.display = "none";
+        // Aquí puedes agregar el código para matricular al usuario
+        alert("Te has matriculado con éxito en " + materiaNombre);
+    };
+}
+
 
     // Manejador para cerrar sesión
     document.getElementById('logoutButton').addEventListener('click', function() {
