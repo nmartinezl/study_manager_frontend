@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Tareas y Exámenes</title>
+
+    <!-- Incluir FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazar con el archivo de estilos -->
+</head>
+<body>
+    <div class="container">
+        <h1>Calendario de Tareas y Exámenes</h1>
+
+        <!-- Div donde se mostrará el calendario -->
+        <div id="calendar"></div>
+
+        <!-- Botón para agregar nueva tarea -->
+        <button id="btn-agregar-tarea">Agregar Nueva Tarea</button>
+
+        <!-- Formulario para agregar nuevas tareas (oculto inicialmente) -->
+        <form id="agregar-tarea-form" style="display: none;">
+            <label for="tarea">Tarea:</label>
+            <input type="text" id="tarea" placeholder="Escribe una tarea">
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+
+            <button type="submit">Agregar Tarea</button>
+        </form>
+
+        <a href="principal.html" class="btn-volver">Volver al Panel Principal</a>
+    </div>
+
+    <!-- Incluir FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+    <!-- Incluir el archivo JavaScript -->
+    <script src="calendar.js"></script>
+</body>
+</html>
+

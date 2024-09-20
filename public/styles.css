@@ -16,15 +16,15 @@ body {
     text-align: center;
     padding: 15px 0;
     margin-bottom: 20px;
-    position: relative; /* Permite posicionar el botón dentro del header */
+    position: relative;
 }
 
 .main-header h2 {
     margin: 0;
-    font-size: 24px;  /* Ajuste del tamaño de la fuente del logo */
+    font-size: 24px;
 }
 
-/* Botón de Cerrar Sesión dentro del Header */
+/* Botón de Cerrar Sesión */
 .logout-button {
     background-color: #dc3545;
     color: white;
@@ -33,9 +33,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    position: absolute; /* Posicionar el botón en la esquina superior derecha */
-    right: 20px; /* Separación del borde derecho */
-    top: 15px; /* Separación del borde superior */
+    position: absolute;
+    right: 20px;
+    top: 15px;
 }
 
 .logout-button:hover {
@@ -44,23 +44,23 @@ body {
 
 /* Contenedor Principal */
 .container {
-    flex: 1; /* Permitir que el contenedor principal crezca */
-    max-width: 600px; /* Ajustar el ancho máximo del contenedor */
-    width: 90%; /* Ancho responsivo */
+    flex: 1;
+    max-width: 600px;
+    width: 90%;
     background-color: white;
-    margin: 0 auto; /* Centrar el contenedor */
+    margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centrar el texto */
+    text-align: center;
 }
 
 /* Títulos Dinámicos */
 .container h3 {
-    font-size: 20px; /* Reducir el tamaño del título */
+    font-size: 20px;
     color: #333;
     margin-bottom: 10px;
-    transition: opacity 0.3s ease; /* Transición suave */
+    transition: opacity 0.3s ease;
 }
 
 /* Listas */
@@ -83,11 +83,6 @@ body {
     background-color: #ddd;
 }
 
-/* Contenedores Dinámicos */
-.anio-container, .materia-container {
-    margin-top: 20px;
-}
-
 /* Botones de Navegación */
 .back-button {
     background-color: #007bff;
@@ -97,56 +92,235 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-    transition: background-color 0.3s;
 }
 
 .back-button:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para Formularios (Login y Registro) */
-.container form {
+/* Contenedor principal para recomendaciones */
+.recomendaciones-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.container label {
+/* Título centrado */
+.recomendaciones-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Lista de recomendaciones */
+.recomendaciones-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    text-align: left; /* Alinear texto de las recomendaciones a la izquierda */
+}
+
+/* Elementos de la lista de recomendaciones */
+.recomendaciones-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.recomendaciones-list li:hover {
+    background-color: #e6f7ff;
+}
+
+/* Botón para volver al panel principal */
+.btn-volver {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .recomendaciones-container {
+        padding: 15px;
+    }
+    recomendaciones-list li {
+        padding: 8px;
+    }
+    .btn-volver {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilos para el Calendario y Formularios */
+form, #calendario, #btn-agregar-tarea, #btn-volver-calendario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
     margin-top: 10px;
     font-weight: bold;
-    text-align: left;
-    width: 100%;
 }
 
-.container input {
-    width: 90%;
+form input, form button {
+    width: 100%;
     padding: 10px;
     margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-.container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
+form button {
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.container button:hover {
-    background-color: #218838;
+form button:hover {
+    background-color: #45a049;
 }
 
-#message {
+#calendario {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+#calendario li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#calendario li:hover {
+    background-color: #e6f7ff;
+}
+
+/* Botones de Calendario */
+#btn-agregar-tarea, #btn-volver-calendario {
+    width: 50%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-agregar-tarea:hover, #btn-volver-calendario:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para centrar el contenido del calendario */
+.calendario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#calendario {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#calendario li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#btn-agregar-tarea, #btn-volver-calendario {
+    width: 50%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-agregar-tarea:hover, #btn-volver-calendario:hover {
+    background-color: #0056b3;
+}
+
+/* Formulario responsivo */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
     margin-top: 10px;
-    color: red;
-    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+
+
 
 /* Footer */
 .main-footer {
@@ -156,32 +330,33 @@ body {
     padding: 15px 0;
     margin-top: 20px;
     width: 100%;
-    flex-shrink: 0; /* Evitar que el footer se reduzca */
+    flex-shrink: 0;
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     .main-header h2 {
-        font-size: 20px; /* Reducir tamaño de fuente del header en pantallas pequeñas */
+        font-size: 20px;
     }
 
     .container {
-        max-width: 90%; /* Hacer el contenedor más pequeño en pantallas pequeñas */
-        padding: 15px; /* Reducir el padding */
+        max-width: 90%;
+        padding: 15px;
     }
 
-    .list li {
-        padding: 8px; /* Reducir el padding de las listas */
-    }
-
-    .logout-button {
-        font-size: 14px; /* Reducir tamaño del botón en pantallas pequeñas */
-        padding: 8px 15px; /* Ajustar el padding del botón */
-        right: 10px; /* Reducir el margen derecho */
-        top: 10px; /* Reducir el margen superior */
+    form, #calendario, #btn-agregar-tarea, #btn-volver-calendario {
+        width: 90%;
     }
 }
 
+@media (max-width: 480px) {
+    form, #calendario, #btn-agregar-tarea, #btn-volver-calendario {
+        width: 100%;
+        padding: 8px;
+    }
 
+    .btn-volver {
+        padding: 8px;
+    }
 
-
+}
