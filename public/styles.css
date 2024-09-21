@@ -373,6 +373,48 @@ form button:hover {
     background-color: #45a049;
   }
   
+/* Estilos para la pantalla de bienvenida */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
 
 
 
